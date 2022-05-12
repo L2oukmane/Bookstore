@@ -1,32 +1,13 @@
 import React from 'react';
-import BookList from '../components/BookList';
-import InputBook from '../components/InputBook';
+import BooksList from '../components/BooksList';
+import RegisterBook from '../components/RegisterBook';
 
-function Books() {
-  const books = [
-    {
-      id: 1,
-      title: 'The Da Vinci Code ',
-      author: 'Dan Brown',
-    },
-    {
-      id: 2,
-      title: 'A Better India: A Better World',
-      author: 'Narayana Murthy',
-    },
-    {
-      id: 3,
-      title: 'A Revenue Stamp',
-      author: 'Amrita Pritam',
-    },
-  ];
+const BooksPage = () => (
+  <>
+    <h2>Books page</h2>
+    <BooksList />
+    <RegisterBook />
+  </>
+);
 
-  return (
-    <div>
-      <BookList books={books} />
-      <InputBook />
-    </div>
-  );
-}
-
-export default Books;
+export default BooksPage;
