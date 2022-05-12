@@ -97,4 +97,4 @@ All source code files are licensed under the permissive zlib license
 
 ## 📝 License
 
-This project is [MIT] licensed.
+This project is [MIT](https://github.com/L2oukmane/Bookstore/blob/react/redux/LICENSE.md) licensed.
