@@ -94,3 +94,7 @@ All source code files are licensed under the permissive zlib license
 ## Author
 
 - **Loukmane Oustani** - [github](https://github.com/L2oukmane), [linkedin](https://www.linkedin.com/in/loukmane-oustani-221668211/), [twitter](https://twitter.com/LoukmaneOustani)
+
+## 📝 License
+
+This project is [MIT](https://github.com/L2oukmane/Bookstore/blob/react/redux/LICENSE.md) licensed.

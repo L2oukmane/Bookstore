@@ -1,29 +1,20 @@
-import {
-  Route,
-  Routes,
-} from 'react-router-dom';
-import NavBar from './components/Navbar';
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import BooksPage from './pages/BooksPage';
+import CategoriesPage from './pages/CategoriesPage';
+import NoMatch from './pages/NoMatch';
 import './App.css';
-import Books from './pages/Books';
-import Categories from './pages/Categories';
-import Header from './components/Header';
 
-function App() {
-  return (
-    <div>
-      <div className="container">
-        <div className="inner">
-          <NavBar />
-          <Header />
-          <Routes>
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/" element={<Books />} />
-          </Routes>
-        </div>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <div className="main-container">
+    <Navbar />
+    <Routes>
+      <Route path="/" exact element={<BooksPage />} />
+      <Route path="/categories" element={<CategoriesPage />} />
+      <Route path="*" element={<NoMatch />} />
+    </Routes>
+  </div>
+);
 
 export default App;
