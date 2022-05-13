@@ -1,20 +1,16 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import BooksPage from './pages/BooksPage';
-import CategoriesPage from './pages/CategoriesPage';
-import NoMatch from './pages/NoMatch';
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './redux/configureStore';
 
-const App = () => (
-  <div className="main-container">
-    <Navbar />
-    <Routes>
-      <Route path="/" exact element={<BooksPage />} />
-      <Route path="/categories" element={<CategoriesPage />} />
-      <Route path="*" element={<NoMatch />} />
-    </Routes>
-  </div>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
 );
-
-export default App;
