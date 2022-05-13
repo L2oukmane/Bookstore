@@ -23,12 +23,15 @@ const Book = (props) => {
         <p>{author}</p>
         <div className="book-actions-container">
           <button type="button">Comments</button>
+          <hr className="vertical" />
           <button type="button" onClick={deleteHandler}>Remove</button>
+          <hr className="vertical" />
           <button type="button">Edit</button>
         </div>
       </div>
       <div className="card-progress">
         <Progress />
+        <hr className="vertical-2" />
         <div className="current-position">
           <h2>CURRENT CHAPTER</h2>
           <h3>Chapter 3: &quot;A Lesson Learned&quot;</h3>

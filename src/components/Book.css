@@ -52,6 +52,8 @@
 
 .book-actions-container {
   margin-top: 1.313rem;
+  display: flex;
+  gap:10px;
 }
 
 .card-progress {
@@ -96,4 +98,15 @@
   border: none;
   background-color: var(--azure);
   color: var(--white);
+}
+
+.vertical {
+  -webkit-transform:rotate(180deg);
+  color:var(--grey-border);
+}
+
+.vertical-2{
+  -webkit-transform:rotate(90deg);
+  color:var(--grey-border);
+  width:50px;
 }
