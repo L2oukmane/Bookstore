@@ -1,13 +1,19 @@
 import React from 'react';
-import BooksList from './BooksList';
-import RegisterBook from './RegisterBook';
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories';
 
-const BooksPage = () => (
-  <>
-    <h2>Books page</h2>
-    <BooksList />
-    <RegisterBook />
-  </>
-);
+const Categories = () => {
+  const dispatch = useDispatch();
 
-export default BooksPage;
+  const checkStatusHandler = () => {
+    dispatch(checkStatus());
+  };
+
+  return (
+    <>
+      <button type="button" onClick={checkStatusHandler}>Check Status</button>
+    </>
+  );
+};
+
+export default Categories;
